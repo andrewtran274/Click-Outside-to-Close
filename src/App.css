@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: #3e3e3e;
+}
+
+.container {
+  width: 1200px;
+  max-width: calc(100% - 50px);
+  /* background-color: #fff; */
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 20px 30px;
+  justify-content: space-between;
+  color: aliceblue;
+}
+
+.header .logo {
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  /* background-color: #fff; */
+  line-height: 40px;
+}
+
+.header .logo span {
+  color: red;
+}
+
+.header .profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid #fff;
+  position: relative;
+}
+
+.header .profile .profile-diablog {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  animation: openDiablogBox 0.5s linear forwards;
+  width: 300px;
+  background-color: #5c5c5c;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes openDiablogBox {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header .profile .profile-diablog .item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.header .profile .profile-diablog .item .icon {
+  width: 30px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 10px;
+}
+
+.header .profile .profile-diablog::before {
+  position: absolute;
+  content: "";
+  background-color: transparent;
+  top: -10px;
+  border-bottom: 10px solid #5c5c5c;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  right: 20px;
+  transform: translateX(50%);
+}
